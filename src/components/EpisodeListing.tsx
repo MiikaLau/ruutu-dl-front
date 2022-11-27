@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import { baseUrl, useGetEpisodesQuery } from "../redux/data";
 import { useAppSelector } from "../redux/hooks";
