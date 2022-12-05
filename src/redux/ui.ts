@@ -1,7 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { EpisodesQuery } from './data';
 
 interface UiState {
-    selectedTitle: null | number;
+    selectedTitle: null | EpisodesQuery;
 }
 
 export const uiSlice = createSlice({
@@ -10,7 +11,7 @@ export const uiSlice = createSlice({
         selectedTitle: null,
     } as UiState,
     reducers: {
-        setSelectedTitle: (state, action) => {
+        setSelectedTitle: (state, action: PayloadAction<EpisodesQuery | null>) => {
             state.selectedTitle = action.payload
         },
     },
